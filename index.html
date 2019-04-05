@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+
+        <div class="main-container">   
+            <div class="interface-container">
+                <input type="text" class="description-input" placeholder="Enter description">
+                <input type="number" class="amount-input" placeholder="Enter amount">
+                <div class="switch-container">  
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+                <button>Add</button>
+            </div>
+            <div class="acc-overview">
+                <div class="balance-container">
+                    <h1>Account Balance: </h1>
+                </div>
+            </div>
+            <button class="clear-button">Clear</button>
+        </div>
+        <script src="./js/script.js" async defer></script>
+    </body>
+</html>
