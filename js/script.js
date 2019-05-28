@@ -19,7 +19,6 @@ function arrayToStorage(arr) {
 // Getting array from Local Storage
 function getFromStorage() {
     if (localStorage.getItem('transactions')) transactions = JSON.parse(localStorage.getItem('transactions'))
-    else transactions = [];
 }
 
 // Creating a transaction array
@@ -43,7 +42,7 @@ function createTransaction() {
 function renderTransactions(transactions) {
 
 
-// Creating the account balance interface
+    // Rendering the account balance 
 
     document.querySelector('.balance-container').innerHTML = '';
     let balanceInfo = document.createElement('div');
@@ -58,7 +57,7 @@ function renderTransactions(transactions) {
 
 
 
-// Creating transaction boxes
+    // Creating transaction boxes
 
     transactions.forEach(function(transaction, index) {
         let transactionBox = document.createElement('div');
@@ -66,13 +65,13 @@ function renderTransactions(transactions) {
         transactionBox.className = 'transaction ';
         if (transaction[1] > 0) {
             transactionBox.innerHTML = `
-            <div class="trans-description">${transaction[0]}</div>
-            <div class="trans-date">${transaction[2]}</div>
-            <div class="trans-amount green">${transaction[1].toLocaleString()} €</div>
-            <i class="far fa-trash-alt delete-icon"></i>`;
+                                    <div class="trans-description">${transaction[0]}</div>
+                                    <div class="trans-date">${transaction[2]}</div>
+                                    <div class="trans-amount green">${transaction[1].toLocaleString()} €</div>
+                                    <i class="far fa-trash-alt delete-icon"></i>`;
         }
         else {
-        transactionBox.innerHTML = `
+            transactionBox.innerHTML = `
                                     <div class="trans-description">${transaction[0]}</div>
                                     <div class="trans-date">${transaction[2]}</div>
                                     <div class="trans-amount">${transaction[1].toLocaleString()} €</div>
@@ -107,7 +106,7 @@ function calcBalance() {
 // Clearing Local Storage
 function clearStorage() {
     localStorage.clear();
-    getFromStorage();
+    transactions = [];
     renderTransactions(transactions);
 }
 
